@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffccff, #dda0dd);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 15%;
+        }
+        h1 {
+            color: #ff4d88;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+        }
+        .buttons button {
+            background-color: #ff4d88;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        .buttons button:hover {
+            opacity: 0.8;
+        }
+        img {
+            width: 300px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #ff4d88;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? <span class="heart">❤</span></h1>
+        <div class="buttons">
+            <button onclick="yesRedirect()">Yes</button>
+            <button onclick="noRedirect()">No</button>
+        </div>
+        <div id="yesMessage" style="display:none;">
+            <h1>Yay! 💖</h1>
+            <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Cute celebration GIF">
+            <p>We're gonna watch cute movies together and FT on the 14th! 💕</p>
+        </div>
+    </div>
+    <script>
+        function yesRedirect() {
+            document.getElementById('yesMessage').style.display = 'block';
+            document.querySelector('.buttons').style.display = 'none';
+        }
+        function noRedirect() {
+            alert('💔 Oh no...');
+        }
+    </script>
+</body>
+</html>
